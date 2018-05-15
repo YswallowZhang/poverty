@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>玩转</title>
+    <link rel="stylesheet" href="/styles/play/product.css">
+</head>
+<body>
+    <header>
+        <div class="header-wrap">
+            <ul class="header-nav">
+                <li class="h1"><a href="/" class="header-nav-list">首页<div class="border"></div></a></li>
+                <li class="h3"><a href="/news" class="header-nav-list">酉阳资讯<div class="border"></div></a></li>
+                <li class="h2"><a href="/play" class="header-nav-list header-nav-active">玩转酉阳<div class="border"></div></a></li>
+                <li class="h4"><a href="/hotel" class="header-nav-list">酉阳酒店<div class="border"></div></a></li>
+                <% if(userType == 'admin') { %>
+                <li class="h5"><a href="/admin" class="header-nav-list">管理中心<div class="border"></div></a></li>
+                 <% } %>
+            </ul>
+            <% if(!username) { %>
+                <div class="login-out">
+                    <a href="/login" id="login">登录</a>
+                    <span>|</span>
+                    <a href="/regist" id="regist">注册</a>
+                </div>
+            <% } else { %> 
+                <div class="login-haved">
+                    <p><a href="/user/center">用户：<%=username%></a></p>
+                </div>
+            <% } %>
+        </div>
+    </header>
+    <div class="useless">
+         <img src="/img/play/风俗2.jpg" class="useless-img2">
+         <img src="/img/play/风俗2.png" class="useless-img1">
+    </div>
+    <div class="content1">
+        <div class="subShadowBox"></div>
+        <div class="content1-in">
+            <div class="content-box">
+                <h2>特产推荐</h2>
+                <% for (let i = 0; i < goods.length; i ++) { %>
+                <div class="item">
+                    <div class="item-left"><img src="/img/play/<%=goods[i].goods_pic%>" alt=""></div>
+                    <div class="item-right">
+                        <h3 class="detail-title"><%=goods[i].goods_name%></h3>
+                        <p class="detail-cont">简介：&nbsp&nbsp&nbsp<%=goods[i].goods_detail%></p>
+                        <div class="item-right-btn-box">
+                            <div class="detail-price">
+                                价格<span><em>￥<%=goods[i].goods_price%></em>/件</span>
+                            </div>
+                            <div class="detail-number">
+                                数量<span class="number-descrease">-</span><input type="text" class="number-amount" value="1"><span class="number-add">+</span>件
+                            </div>
+                            <div class="detail-btn">
+                                <div class="detail-btn-buy">立即购买</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="cover-warp">
+                        <h3>请填写收货信息</h3>
+                        <div class="order-address">
+                            <span>详细地址</span>
+                            <input type="text" class="order-item order-deadd">
+                        </div>
+                        <div class="order-address">
+                            <span>收货人姓名</span>
+                            <input type="text" class="order-item order-name">
+                        </div>
+                        <div class="order-address">
+                            <span>手机号码</span>
+                            <input type="text" class="order-item order-tele">
+                        </div>
+                        <div class="order-confirm">确认</div>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+    <script> 
+        var goods = '<%- JSON.stringify(goods) %>'; 
+        goods = JSON.parse(goods);
+        var username = '<%=username%>';
+    </script>
+    <script src="/js/product/product_detail.js"></script>
+</body>
+</html>

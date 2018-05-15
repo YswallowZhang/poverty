@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <link rel="stylesheet" href="/styles/admin/admin.css">
+</head>
+<body>
+    <div class="headMask"></div>
+    <header>
+        <div class="header-wrap">
+            <ul class="header-nav">
+                <li class="h1"><a href="/" class="header-nav-list">首页<div class="border"></div></a></li>
+                <li class="h3"><a href="/news" class="header-nav-list">酉阳资讯<div class="border"></div></a></li>
+                <li class="h2"><a href="/play" class="header-nav-list">玩转酉阳<div class="border"></div></a></li>
+                <li class="h4"><a href="/hotel" class="header-nav-list">酉阳酒店<div class="border"></div></a></li>
+                <% if(userType == 'admin') { %>
+                <li class="h5"><a href="/admin" class="header-nav-list header-nav-active">管理中心<div class="border"></div></a></li>
+                 <% } %>
+            </ul>
+            <% if(!username) { %>
+                <div class="login-out">
+                    <a href="/login" id="login">登录</a>
+                    <span>|</span>
+                    <a href="/regist" id="regist">注册</a>
+                </div>
+            <% } else { %> 
+                <div class="login-haved">
+                    <p><a href="/user/center">用户：<%=username%></a></p>
+                </div>
+            <% } %>
+        </div>
+    </header>
+    <div class="useless">
+    </div>
+    <div class="content1">
+        <div class="subShadowBox"></div>
+        <div class="content1-in">
+            <div class="admin-left">
+                <ul>
+                    <li class="model model-active">管理酉阳资讯</li>
+                    <li class="model"> 管理主题活动</li>
+                    <li class="model">管理酒店</li>
+                    <li class="model">管理特产</li>
+                    <li class="model">管理美食</li>
+                </ul>
+            </div>
+            <div class="admin-middle">
+            
+            </div>
+            <div  class="admin-right">
+                <div class="news admin-moddle">
+                    <div class="admin-list news-list">
+                        <div class="news-add-btn">新增</div>
+                        <ul class="box">
+                        <% for (let i = 0; i < article.length; i ++) { %>
+                            <li class="news-item">
+                                <div class="news-title">标题：<%=article[i].article_name %></div>
+                                <div class="news-btn-box">
+                                    <p class="news-item-cont">内容：<%=article[i].article_detail %></p>
+                                    <div class="news-edit-btn admin-btn">编辑</div>
+                                    <div class="news-delete-btn admin-btn">删除</div>
+                                </div>
+                            </li>
+                        <% } %>
+                        </ul>
+                        <ul class="news-page-box">
+                            <% for(let i = 0; i < pageNews / 3; i ++) {%>
+                            <li class="news-page"><%=i + 1%></li>
+                           <% } %>
+                        </ul>
+                    </div>
+                    <div class="admin-edit news-edit">
+                        <div class="admin-edit-title news-edit-title">标题：<input type="text" id="u-edit-news-title" value="<%=article[0].article_name %>"></div>
+                        <div class="admin-edit-detail news-edit-detail">资讯内容：<textarea  id="u-edit-news-detail"><%=article[0].article_detail %></textarea></div>
+                        <div class="admin-edit-pic news-edit-pic">资讯图片：<img src="/img/news/<%=article[0].article_pics %>" class="u-edit-news-show" id="u-edit-news-pic"><input type="file" id="u-edit-news-flie"></div>
+                        <div class="admin-edit-btn news-edit-btn">提交</div>
+                    </div>
+                    <div class="admin-add news-add">
+                        <div class="admin-add-title">标题：<input type="text" id="u-add-news-title"></div>
+                        <div class="admin-add-detail">资讯内容：<textarea  id="u-add-news-detail"></textarea></div>
+                        <div class="admin-add-pic">资讯图片：<input type="file"  id="u-add-news-file"><img src="" class="u-add-news-show" id="u-add-news-pic"></div>
+                        <div class="admin-add-btn news-add-submit">提交</div>
+                    </div>
+                </div>
+                <div class="theme admin-moddle"></div>
+                <div class="hotel admin-moddle"></div>
+                <div class="goods admin-moddle"></div>
+                <div class="food admin-moddle"></div>
+        </div>
+    </div>
+    <div id="cover"><div class="cover-cont"><p>提交成功！</p><div class="confirm">确定</div></div></div>
+    <script>
+    var article = <%- JSON.stringify(article)%>;
+    </script>
+    <script src="/js/admin/admin.js"></script>
+</body>
+</html>

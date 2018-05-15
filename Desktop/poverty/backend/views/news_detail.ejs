@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文章详情</title>
+    <link rel="stylesheet" href="/styles/news/news_detail.css">
+</head>
+<body>
+    <div class="headMask"></div>
+    <header>
+        <div class="header-wrap">
+            <ul class="header-nav">
+                <li class="h1"><a href="/" class="header-nav-list">首页<div class="border"></div></a></li>
+                <li class="h3"><a href="/news" class="header-nav-list header-nav-active">酉阳资讯<div class="border"></div></a></li>
+                <li class="h2"><a href="/play" class="header-nav-list">玩转酉阳<div class="border"></div></a></li>
+                <li class="h4"><a href="/hotel" class="header-nav-list">酉阳酒店<div class="border"></div></a></li>
+                <% if(userType == 'admin') { %>
+                <li class="h5"><a href="/admin" class="header-nav-list">管理中心<div class="border"></div></a></li>
+                 <% } %>
+            </ul>
+            <% if(!username) { %>
+                <div class="login-out">
+                    <a href="/login" id="login">登录</a>
+                    <span>|</span>
+                    <a href="/regist" id="regist">注册</a>
+                </div>
+            <% } else { %> 
+                <div class="login-haved">
+                    <p><a href="/user/center">用户：<%=username%></a></p>
+                </div>
+            <% } %>
+        </div>
+    </header>
+    <div class="useless"></div>
+    <div class="content1">
+        <div class="subShadowBox"></div>
+        <div class="content1-in">
+            <div class="content-left foldtl">
+                <div class="left-title"><div class="title-bg"></div><h3><%=article.article_name %></h3><div class="title-bg"></div></div>
+                <span class="date-box">发布日期：<em class="date"><%=article.article_time %></em></span>
+                <div class="detail-box"><div class="detail-bg"></div><p><%=article.article_detail %><img src="/img/news/<%=article.article_pics %>"></p><div class="detail-bg"></div></div>
+            </div>
+            <div class="content-right">
+                <div class="melon-box">
+                    <h2>为你推荐</h2>
+                    <ul class="recommend">
+                    <% for (let i = 0; i < articles.length; i ++) { %>
+                        <li>
+                            <a href="/news/<%=articles[i].id %>"><%=articles[i].article_name %></a>
+                        </li>
+                    <% } %>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/news/news_detail.js"></script>
+</body>
+</html>

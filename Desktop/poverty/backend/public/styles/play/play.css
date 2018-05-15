@@ -1,0 +1,490 @@
+body {
+    padding: 0;
+    margin: 0;
+    /* background:#e2e0de url(/img/play/背景.jpg) no-repeat center top; */
+    position: relative;
+    background-size: 100% 1500px;
+}
+ul, li, p {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+h2 {
+    padding: 0;
+    margin: 0;
+}
+em {
+    font-style: normal;
+}
+a {
+    text-decoration: none;
+}
+.headMask {
+    height: 200px;
+    width: 100%;
+    min-width: 1200px;
+    position: absolute;
+    top: -100px;
+    left: 0px;
+    z-index: 2;
+    background-color: rgba(255,255,255,0.3);
+    filter: blur(20px);
+    background-attachment: fixed;
+
+}
+header {
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    overflow: hidden;
+}
+.header-wrap {
+    margin: 0 auto;
+    height: 100px;
+    width: 1000px;
+    overflow: hidden;
+    position: relative;
+}
+.header-nav {
+    font-size: 14px; 
+    display: flex; 
+    color: #333;
+    float: left;
+    overflow: hidden;
+}
+.header-nav a {
+    transition: all 0.1s;
+    font-size: 14px;
+    width: 100px;
+    display: inline-block;
+    height: 100px;
+    line-height: 160px;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    color: #333;
+    padding: 0 16px;
+    position: relative;
+}
+.h1 a {
+    background: url('/img/home/植物icon-一点红.png') no-repeat;
+    background-position: center 0px;
+}
+.h2 a {
+    background: url('/img/home/植物icon-海棠花.png') no-repeat;
+    background-position: center 0px;
+}
+.h3 a {
+    background: url('/img/home/植物icon-铁树.png') no-repeat;
+    background-position: center 0px;
+}
+.h4 a {
+    background: url('/img/home/植物icon-百合.png') no-repeat;
+    background-position: center 0px;
+}
+.h5 a {
+    background: url('/img/home/植物icon-荷花.png') no-repeat;
+    background-position: center 0px;
+}
+.border {
+    width: 100px;
+    height: 8px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.header-nav a:hover {
+    color: #ff9d00 !important;
+}
+.header-nav-hover {
+    color: #ff9d00 !important;
+}
+.header-nav-active {
+    color: #ff9d00 !important;
+}
+.header-nav-active div {
+    background: url('/img/home/叶子2.png');
+}
+.header-nav li {
+    display: flex;
+    align-items: center;
+}
+
+.login-out {
+    float: right;
+    line-height: 150px;
+    background: url('/img/home/形状点缀.png') no-repeat;
+    background-position: center 0px;
+}
+.login-out span {
+    color: #333;
+}
+#login {
+    color: #ff9d00;
+}
+#login:hover {
+    text-decoration: underline;
+}
+#regist {
+    color: #ff9d00;
+}
+#regist:hover {
+    text-decoration: underline;
+}
+.useless {
+    height: 616px;
+    width: 100%;
+    min-width: 1200px;
+    position: relative;
+    overflow: hidden;
+    background-color: #e1e0de;
+}
+.useless img {
+    display: inline-block;
+}
+.useless-img1 {
+    width: 546px;
+    height: 500px;
+    position: absolute;
+    right: 0;
+    top:60px;
+}
+
+.content1 {
+    width: 100%;
+    /* background: url(/img/news/背景2.png) repeat-x left top; */
+    min-width: 1200px;
+    padding-top: 30px;
+    position: relative;
+}
+.content1 .subShadowBox {
+    background: url(/img/news/背景1.png);
+    width: 1216px;
+    height: 876px;
+    position: absolute;
+    left: 50%;
+    margin-left: -608px;
+    top: 82px;
+}
+.content1 .content1-in {
+    clear: both;
+    padding: 25px;
+    width: 1200px;
+    min-height: 606px;
+    box-sizing: border-box;
+    margin: auto;
+    background:#e8e7e5;;
+    border: 1px solid #e2e0de;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+.in1 {
+    position: relative;
+    margin: 0 auto;
+}
+.r1-title {
+    width: 100%;
+    height: 100px;
+    font-size: 16px;
+    line-height: 100px;
+    padding-left: 10px;
+    color: #484643;
+    font-family: '楷体';
+    box-sizing: border-box;
+    background: #e8e7e5 url(/img/play/dirve_bg6.jpg) no-repeat 10px -25px;
+}
+.r1-title h2 span {
+    font-size: 18px;
+    margin-left: 40px;
+}
+.bd {
+    width: 851px;
+    height: 284px;
+    margin-top: 15px;
+}
+.bd ul li {
+    width: 210px;
+    height: 281px;
+    position: relative;
+}
+.content1 .content1-in .in1 .bd ul li .img {
+    width: 210px;
+    height: 160px;
+    overflow: hidden;
+}
+.content1 .content1-in  .in1 .bd ul li .img img {
+    width: 210px;
+    height: 160px;
+}
+.in1 .bd ul li .word {
+    width: 100%;
+    height: 135px;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+.content1 .content1-in .in1 .bd ul li .word .h2 {
+    font-size: 16px;
+    font-family: "微软雅黑";
+    line-height: 22px;
+    font-weight: normal;
+    padding-top: 20px;
+    height: 44px;
+    overflow: hidden;
+}
+.in1 .bd ul li .word .info {
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 5px;
+    height: 36px;
+    overflow: hidden
+}
+.in1 .bd ul li .liBorder {
+    border: 5px solid #a50000;
+    border-bottom: none;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+.in1 .bd ul li .detail {
+    width: 47px;
+    height: 53px;
+    position: absolute;
+    top: 125px;
+    left: 50%;
+    margin-left: -21px;
+    box-sizing: border-box;
+    padding-left: 7px;
+    line-height: 45px;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    color: #fff;
+    display: none;
+}
+.in1 .bd ul .num {
+    width: 52px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.in1 .bd ul .i1 .num {
+    background: url(/img/play/num5.png) no-repeat center center;
+}
+.in1 .bd ul .i2 .num {
+    background: url(/img/play/num6.png) no-repeat center center;
+}
+.in1 .bd ul .i3 .num {
+    background: url(/img/play/num7.png) no-repeat center center;
+}
+.in1 .bd ul .i4 .num {
+    background: url(/img/play/num8.png) no-repeat center center;
+}
+.in1 .bd ul .i1 .word {
+    background: url(/img/play/li_img1.png) no-repeat bottom right;
+}
+.in1 .bd ul .i2 .word {
+    background: url(/img/play/li_img2.png) no-repeat bottom right;
+}
+.in1 .bd ul .i3 .word {
+    background: url(/img/play/li_img3.png) no-repeat bottom right;
+}
+.in1 .bd ul .i4 .word {
+    background: url(/img/play/li_img4.png) no-repeat bottom right;
+}
+.in1 .bd ul .i1 .detail {
+    background: url(/img/play/fangxin1.png) no-repeat center center;
+}
+.in1 .bd ul .i2 .detail {
+    background: url(/img/play/fangxin2.png) no-repeat center center;
+}
+.in1 .bd ul .i3 .detail {
+    background: url(/img/play/fangxin3.png) no-repeat center center;
+}
+.in1 .bd ul .i4 .detail {
+    background: url(/img/play/fangxin4.png) no-repeat center center;
+}
+.in1 .bd ul .i1 .liBorder {
+    border-color: #a50000;
+}
+.in1 .bd ul .i2 .liBorder {
+    border-color: #b1a87d;
+}
+.in1 .bd ul .i3 .liBorder {
+    border-color: #75a5a7;
+}
+.in1 .bd ul .i4 .liBorder {
+    border-color: #83bdac;
+}
+.bd ul li:hover .liBorder {
+    display: block !important;
+}
+.bd ul li:hover .detail {
+    display: block !important;
+}
+.in1 .bd ul .i1:hover .word {
+    background: #a60303 url(/img/play/cont_bg3V2.png) no-repeat 50px 15px;
+}
+.in1 .bd ul .i2:hover .word {
+    background: #b1a87d url(/img/play/cont_bg3V2.png) no-repeat 50px 15px;
+}
+.in1 .bd ul .i3:hover .word {
+    background: #75a5a7 url(/img/play/cont_bg3V2.png) no-repeat 50px 15px;
+}
+.in1 .bd ul .i4:hover .word {
+    background: #83bdac url(/img/play/cont_bg3V2.png) no-repeat 50px 15px;
+}
+.theme-title {
+    height: 100px;
+    line-height: 100px;
+    width: 99%;
+    padding-left: 10px;
+    background: #e8e7e5 url(/img/play/dirve_bg2.jpg) no-repeat left top;;
+} 
+.theme-item-right {
+    width: 500px;
+}
+.theme-item-right h3 {
+    text-align: center;
+    margin-bottom: 8px;
+}
+.theme-item-right p {
+    font-size: 14px;
+    line-height: 20px;
+}
+.theme-item-right {
+    background-color: #fff;
+    border-top: 1px solid #e5e5e5;
+    padding: 21px 15px 20px;
+    cursor: pointer;
+    box-sizing: border-box;
+    box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 20px 500px;
+    border-bottom-right-radius: 500px 30px;
+    border-top-right-radius: 5px 100px;
+    box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 0 #F6EF97;
+    position: relative;
+    margin-left: 140px;
+}
+.theme-item-right:after {
+    width: 140px;
+    height: 30px;
+    content: " ";
+    margin-left: -90px;
+    border: 1px solid rgba(200, 200, 200, .8);
+    background: rgba(254, 254, 254, .6);
+    -moz-box-shadow: 0px 0 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0 3px rgba(0, 0, 0, 0.1);
+    -moz-transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+    position: absolute;
+    left:-50px;
+    top:90px;
+}
+.theme-item {
+    display: flex;
+    align-items: center;
+    height: 242px;;
+    border-bottom: 2px dotted #fff;
+}
+.theme-item-left {
+    
+}
+@keyframes rotation{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    } 
+}
+.theme-item-left img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    display: inline-block;
+    transform: rotate(360deg);
+    animation: rotation 20s linear infinite;
+}
+.c-right-box {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.c-right-box:hover {
+    background-color: #75a5a7
+}
+.c-right-box:hover h4{
+    color: #fff
+}
+.right-box-top img {
+    display: inline-block;
+    width: 218px;
+    height: 130px;;
+}
+.right-box-bottom {
+    width: 218px;
+    cursor: pointer;
+}
+.right-box-bottom h4 {
+    color:#846c5a;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    text-align: center;
+}
+.right-box-bottom p {
+    color: #666
+}
+.content-right {
+    border-left: 2px dotted #fff;
+    padding-left: 10px;
+}
+.content-right h2 {
+    height: 80px;
+    position: relative;
+    line-height: 80px;
+    margin-bottom: 10px;
+    background: url(/img/play/dirve_bg3.jpg) no-repeat center;
+}
+.login-haved {
+    float: right;
+    line-height: 150px;
+    background: url('/img/home/气球.png') no-repeat;
+    background-position: center 0px
+}
+.login-haved p a {
+    color:#ee357a;
+    width: 100px;
+}
+.goods-pr {
+    margin-left: 30px;
+    color:#ff9d00;
+}
+.goods-more {
+    font-size: 18px;
+    color:#a50000;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    right:-10px;
+    line-height: 0;
+}
+.goods-more:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/play/order_detail.css">  
+</head>
+<body>
+    <div class="headMask"></div>
+    <header>
+        <div class="header-wrap">
+            <ul class="header-nav">
+                <li class="h1"><a href="/" class="header-nav-list">首页<div class="border"></div></a></li>
+                <li class="h3"><a href="/news" class="header-nav-list ">酉阳资讯<div class="border"></div></a></li>
+                <li class="h2"><a href="/play" class="header-nav-list">玩转酉阳<div class="border"></div></a></li>
+                <li class="h4"><a href="/hotel" class="header-nav-list">酉阳酒店<div class="border"></div></a></li>
+                <% if(userType == 'admin') { %>
+                <li class="h5"><a href="/admin" class="header-nav-list">管理中心<div class="border"></div></a></li>
+                 <% } %>
+            </ul>
+             <% if(!username) { %>
+                <div class="login-out">
+                    <a href="/login" id="login">登录</a>
+                    <span>|</span>
+                    <a href="/regist" id="regist">注册</a>
+                </div>
+            <% } else { %> 
+                <div class="login-haved">
+                    <p><a href="/user/center">用户：<%=username%></a></p>
+                </div>
+            <% } %>
+        </div>
+    </header>
+    <div class="useless"></div>
+    <div class="content1">
+        <div class="subShadowBox"></div>
+        <div class="content1-in">
+            <div class="in-top">
+                <div class="r1-title">
+                    <h2>我的订单</h2>
+                </div>
+                <ul class="centerTitle">
+                    <li class="">酒店图片</li>
+                    <li class="">酒店名称</li>
+                    <li class="">入住时间</li>
+                    <li class="">离开时间</li>
+                    <li class="">入住人姓名</li>
+                    <li class="">联系方式</li>
+                    <li class="">总计（元）</li>
+                    <li class="">创建时间</li>
+                </ul>
+                <% for (let i = 0; i < livingList.length; i ++) { %>
+                <ul class="centerBody">
+                    <li class=""><img src="/img/hotel/<%=livingList[i].hotel_pic %>"></li>
+                    <li class=""><%=livingList[i].hotel_name %></li>
+                    <li class=""><%=livingList[i].check_in %></li>
+                    <li class=""><%=livingList[i].check_out %></li>
+                    <li class=""><%=livingList[i].customer %></li>
+                    <li class=""><%=livingList[i].telephone %></li>
+                    <li class=""><%=livingList[i].price %></li>
+                    <li class=""><%=livingList[i].date %></li>
+                </ul>
+                <% } %>  
+            </div>
+            <div class="in-top">
+                <ul class="centerTitle">
+                    <li class="">商品图片</li>
+                    <li class="">商品名称</li>
+                    <li class="">商品单价</li>
+                    <li class="">商品数量</li>
+                    <li class="">商品总额</li>
+                    <li class="">收货人姓名</li>
+                    <li class="">联系方式</li>
+                    <li class="">收货地址</li>
+                    <li class="">创建时间</li>
+                </ul>
+                <% for (let i = 0; i < productList.length; i ++) { %>
+                <ul class="centerBody">
+                    <li class=""><img src="/img/play/<%=productList[i].product_pic %>"></li>
+                    <li class=""><%=productList[i].product_name %></li>
+                    <li class=""><%=productList[i].product_price %></li>
+                    <li class=""><%=productList[i].product_number %></li>
+                    <li class=""><%=productList[i].product_total %></li>
+                    <li class=""><%=productList[i].customer_name %></li>
+                    <li class=""><%=productList[i].customer_tele %></li>
+                    <li class=""><%=productList[i].customer_add %></li>
+                    <li class=""><%=productList[i].order_time %></li>
+                </ul>
+                <% } %>  
+            </div>
+            <div class="in-bottom">
+                <div class="r1-title">
+                    <h2>为你推荐</h2>
+                </div>
+                <div class="hotel-box">
+            <ul class="hotel-wrap">
+            <% for (let i = 0; i < hotel.length; i ++) { %>
+                <li class="hotel-item">
+                    <a href="/hotel/<%=hotel[i].id %>">
+                        <div class="hotel-word">
+                            <div class="like">
+                                <img src="/img/hotel/帐篷.png" class="like-img">
+                            </div>
+                            <h2><%=hotel[i].hotel_name %></h2>
+                            <p><%=hotel[i].hotel_detail %> “开荒南野际，守拙归园田”是陶令一直追求的山乡野趣生活，那凝固了千年的诗话，那令人心醉的土家风情，都在岁月的长河里凝聚成醉人的气韵和毓秀沧桑，来，邂逅陶渊明，和他一起在拙园的土家吊脚楼上，一起品读千年的山水田园画卷，一起浅浅吟唱心灵深处的归隐田园。坐落于酉州古城北门的归园田居，是土家汉子倾力打造的土家旅游民宿客栈，睡在山水间，住在人情里，依偎在苍翠的金银山里，蜿蜒在古桃源和二酉山之间的归园田居，沉淀着酉州的时光，书写着土家人灿烂的文化记忆。</p>
+                        </div>
+                        <% for (let j = 0; j < 3; j ++) { %>
+                        <img src="/img/hotel/<%=hotel[i].hotel_pic.split(',')[j] %>" alt="">
+                        <% } %>
+                    </a>
+                </li>
+            <% } %>
+            </ul>
+        </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>酒店</title>
+    <link rel="stylesheet" href="/styles/hotel/hotel.css">
+</head>
+<body>
+    <div class="headMask"></div>
+    <header>
+        <div class="header-wrap">
+            <ul class="header-nav">
+                <li class="h1"><a href="/" class="header-nav-list">首页<div class="border"></div></a></li>
+                <li class="h3"><a href="/news" class="header-nav-list">酉阳资讯<div class="border"></div></a></li>
+                <li class="h2"><a href="/play" class="header-nav-list">玩转酉阳<div class="border"></div></a></li>
+                <li class="h4"><a href="/hotel" class="header-nav-list header-nav-active">酉阳酒店<div class="border"></div></a></li>
+                <% if(userType == 'admin') { %>
+                <li class="h5"><a href="/admin" class="header-nav-list">管理中心<div class="border"></div></a></li>
+                 <% } %>
+            </ul>
+            <% if(!username) { %>
+                <div class="login-out">
+                    <a href="/login" id="login">登录</a>
+                    <span>|</span>
+                    <a href="/regist" id="regist">注册</a>
+                </div>
+            <% } else { %> 
+                <div class="login-haved">
+                    <p><a href="/user/center">用户：<%=username%></a></p>
+                </div>
+            <% } %>
+        </div>
+    </header>
+    <div class="useless">
+    </div>
+    <div class="content1">
+        <div class="subShadowBox"></div>
+        <div class="content1-in">
+            <div class="book-box">
+                <a class="lastBtn"></a>
+                <a class="nextBtn"></a>
+            <% for (let i = 0; i < food.length; i ++) {
+                if(i == 0) { %>
+                 <li class="bookPage first">
+                    <img src="/img/hotel/<%= food[i].food_pic %>">
+                 </li>
+                <% } else { %>
+                    <li class="bookPage runPage">
+                        <div class="bookWord">
+                            <h3><%= food[i - 1].food_name %></h3>
+                            <p class="food-detail"><%= food[i - 1].food_detail %></p>
+                            <p class="food-store">店铺名：<%= food[i - 1].food_store %></p>
+                            <p class="food-po">地址：<%= food[i - 1].food_position %></p>
+                            <span class="pageNumber"><%=i%></span>
+                        </div>
+                        <img src="/img/hotel/<%= food[i].food_pic %>">	
+                    </li>
+            <% }} %>    
+                <li class="bookPage last">
+                    <div class="bookWord">
+                        <h3><%= food[food.length-1].food_name %></h3>
+                        <p class="food-detail"><%= food[food.length-1].food_detail %></p>
+                        <p class="food-store">店铺名：<%= food[food.length-1].food_store %></p>
+                        <p class="food-po">地址：<%= food[food.length-1].food_position %></p>
+                        <span class="pageNumber"><%=food.length%></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+        <div class="hotel-box">
+            <ul class="hotel-wrap">
+            <% for (let i = 0; i < hotel.length; i ++) { %>
+                <li class="hotel-item">
+                    <a href="/hotel/<%=hotel[i].id %>">
+                        <div class="hotel-word">
+                            <div class="like">
+                                <img src="/img/hotel/帐篷.png" class="like-img">
+                            </div>
+                            <h2><%=hotel[i].hotel_name %></h2>
+                            <p><%=hotel[i].hotel_detail %> “开荒南野际，守拙归园田”是陶令一直追求的山乡野趣生活，那凝固了千年的诗话，那令人心醉的土家风情，都在岁月的长河里凝聚成醉人的气韵和毓秀沧桑，来，邂逅陶渊明，和他一起在拙园的土家吊脚楼上，一起品读千年的山水田园画卷，一起浅浅吟唱心灵深处的归隐田园。坐落于酉州古城北门的归园田居，是土家汉子倾力打造的土家旅游民宿客栈，睡在山水间，住在人情里，依偎在苍翠的金银山里，蜿蜒在古桃源和二酉山之间的归园田居，沉淀着酉州的时光，书写着土家人灿烂的文化记忆。</p>
+                        </div>
+                        <% for (let j = 0; j < 3; j ++) { %>
+                        <img src="/img/hotel/<%=hotel[i].hotel_pic.split(',')[j] %>" alt="">
+                        <% } %>
+                    </a>
+                </li>
+            <% } %>
+            </ul>
+        </div>
+    </div>
+    <script>
+        var hotel = '<%- JSON.stringify(hotel) %>'; 
+        var food = '<%- JSON.stringify(food) %>'; 
+        food = JSON.parse(food)
+        hotel = JSON.parse(hotel)
+    </script>
+    <script src="/js/hotel/hotel.js"></script>
+</body>
+</html>

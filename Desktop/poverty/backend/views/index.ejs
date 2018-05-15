@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>重庆酉阳</title>
+    <link rel="stylesheet" href="/styles/home/index.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <div class="headMask"></div>
+    <header>
+        <div class="header-wrap">
+            <ul class="header-nav">
+                <li class="h1"><a href="javascript:void(0)" class="header-nav-list header-nav-active">首页<div class="border"></div></a></li>
+                <li class="h3"><a href="/news" class="header-nav-list">酉阳资讯<div class="border"></div></a></li>
+                <li class="h2"><a href="/play" class="header-nav-list">玩转酉阳<div class="border"></div></a></li>
+                <li class="h4"><a href="/hotel" class="header-nav-list">酉阳酒店<div class="border"></div></a></li>
+                <% if(userType == 'admin') { %>
+                
+                <li class="h5"><a href="/admin" class="header-nav-list">管理中心<div class="border"></div></a></li>
+               
+                 <% } %>
+            </ul>
+            <% if(!username) { %>
+                <div class="login-out">
+                    <a href="/login" id="login">登录</a>
+                    <span>|</span>
+                    <a href="/regist" id="regist">注册</a>
+                </div>
+            <% } else { %> 
+                <div class="login-haved">
+                    <p><a href="/user/center">用户：<%=username%></a></p>
+                </div>
+            <% } %>
+    
+        </div>
+    </header>
+    <!-- 轮播 -->
+    <div class="slider">
+        <ul id="container">
+            <li class="container-list"><img src="/img/home/lunbo1.jpg" alt=""></li>
+            <li class="container-list"><img src="/img/home/lunbo2.jpg" alt=""></li>
+            <li class="container-list"><img src="/img/home/lunbo3.jpg" alt=""></li>
+            <li class="container-list"><img src="/img/home/lunbo4.jpg" alt=""></li>
+        </ul>
+        <ul class="dot">
+            <li class="dot-circle"></li>
+            <li class="dot-circle"></li>
+            <li class="dot-circle"></li>
+            <li class="dot-circle"></li>
+        </ul>
+    </div>
+    <!-- 新闻中心 -->
+    <div class="news">
+        <div class="news-title">
+            <p>酉阳资讯 <a href="/news">更多 ></a></p>
+            <div class="newsBorder"></div>
+        </div>
+        <div class="news-body">
+          
+            <div class="news-body-item">
+                <div class="news-item">
+                    <div class="news-item-left">
+                        <p class="news-item-left-img">
+                            <a href="/news/<%= article[0].id%>">
+                                <img src="/img/news/<%= article[0].article_pics%>" alt="">
+                            </a>
+                        </p>
+                        <a href="" class="news-item-left-words">
+                            <p><%= article[0].article_name%></p>
+                            <div class="news-item-left-memo">
+                                <p><%= article[0].article_detail%></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="news-item-right">
+                          <li class="pbl">
+                            <a  href="/news/<%= article[1].id%>">
+                              <div class="img"><img src="/img/news/<%= article[1].article_pics%>"></div>
+                              <div>
+                                <p class="pbl-title"><%= article[1].article_name%></p>
+                                <p class="pbl-cont"><%= article[1].article_detail%></p>
+                              </div>
+                            </a>
+                          </li>
+                          <li class="pbl">
+                            <a  href="/news/<%= article[2].id%>">
+                              <div class="img"><img src="/img/news/<%= article[2].article_pics%>"></div>
+                              <div>
+                                <p class="pbl-title"><%= article[2].article_name%></p>
+                                <p class="pbl-cont"><%= article[2].article_detail%></p>
+                              </div>
+                            </a>
+                          </li>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    <!-- 产品中心 -->
+    <div class="product">
+        <div class="product-title">
+            <h2>玩转酉阳</h2>
+            <div class="play-bg"></div>
+        </div>
+        <div class="product-more"><a href="/play">更多活动 ></a></div>
+        <div class="product-body">
+        <% for (let i = 0; i < plays.length; i ++) { %>
+            <div class="product-item">
+              <a href="/play">
+                <div class="product-item-wrap"><img src="/img/play/<%=plays[i].play_pic %>" alt=""></div>
+                <div class="product-info">
+                    <p class="product-info-title"><%=plays[i].play_name %></p>
+                </div>
+              </a>
+            </div>
+        <% } %>  
+        </div>
+    </div>
+    <footer>
+        <ul class="footer-content">
+            <li>关于我们</li>
+            <li>联系我们</li>
+            <li>官方认证</li>
+        </ul>
+        <div class="footer-line"></div>
+        <ul class="footer-content">
+            <li>帮助中心</li>
+            <li>酒店预订</li>
+            <li>旅行攻略</li>
+        </ul>
+       <div class="footer-line"></div>
+       <ul class="footer-content">
+            <li>隐私政策</li>
+            <li>网站地图</li>
+            <li>景区合作</li>
+        </ul>
+        <div class="footer-line"></div>
+       <ul class="footer-content">
+            <li>加入我们</li>
+            <li>活动中心</li>
+            <li>用户反馈</li>
+        </ul>
+    </footer>
+
+    <script src="/js/home/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>玩转</title>
+    <link rel="stylesheet" href="/styles/play/play.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-wrap">
+            <ul class="header-nav">
+                <li class="h1"><a href="/" class="header-nav-list">首页<div class="border"></div></a></li>
+                <li class="h3"><a href="/news" class="header-nav-list">酉阳资讯<div class="border"></div></a></li>
+                <li class="h2"><a href="/play" class="header-nav-list header-nav-active">玩转酉阳<div class="border"></div></a></li>
+                <li class="h4"><a href="/hotel" class="header-nav-list">酉阳酒店<div class="border"></div></a></li>
+                <% if(userType == 'admin') { %>
+                <li class="h5"><a href="/admin" class="header-nav-list">管理中心<div class="border"></div></a></li>
+                 <% } %>
+            </ul>
+            <% if(!username) { %>
+                <div class="login-out">
+                    <a href="/login" id="login">登录</a>
+                    <span>|</span>
+                    <a href="/regist" id="regist">注册</a>
+                </div>
+            <% } else { %> 
+                <div class="login-haved">
+                    <p><a href="/user/center">用户：<%=username%></a></p>
+                </div>
+            <% } %>
+        </div>
+    </header>
+    <div class="useless">
+         <img src="/img/play/风俗2.jpg" class="useless-img2">
+         <img src="/img/play/风俗2.png" class="useless-img1">
+    </div>
+    <div class="content1">
+        <div class="subShadowBox"></div>
+        <div class="content1-in">
+            <div class="content-left">
+                <div class="in1">
+                    <div class="r1-title">
+                        <h2>行程推荐<span>感土家风情、赏木叶号子、品土家美食</span></h2>
+                    </div>
+                    <div class="bd">
+                        <div class="tempWrap" style="overflow:hidden; position:relative;">
+                            <ul style="width: 3150px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+                                <li class="i1" style="float: left; width: 210px;">
+                                    <a href="/play/travel/1">
+                                        <div class="img"><img src="/img/play/行程1.jpg" alt=""></div>
+                                        <div class="word"><h2 class="h2">桃花源一日游</h2><p class="info">桃花源景区 太古洞 5A 酉州古城</p></div>
+                                        <span class="liBorder" style="display: none;"></span>
+                                        <span class="detail" style="display: none;"> 详情</span>
+                                        <span class="num"></span>
+                                    </a>
+                                </li>
+                            
+                                <li class="i2" style="float: left; width: 210px;">
+                                    <a href="/play/travel/2">
+                                        <div class="img"><img src="/img/play/行程2.jpg" alt=""></div>
+                                        <div class="word"><h2 class="h2">酉阳县内旅游</h2><p class="info">桃花源龚滩阿蓬江三日游 桃花源 太古洞 乌江百里画廊 阿蓬江 石泉苗寨</p></div>
+                                        <span class="liBorder" style="display: none;"></span>
+                                        <span class="detail" style="display: none;"> 详情</span>
+                                        <span class="num"></span>
+                                    </a>
+                                </li>
+                            
+                                <li class="i3" style="float: left; width: 210px;">
+                                    <a href="/play/travel/3">
+                                        <div class="img"><img src="/img/play/行程3.jpg" alt=""></div>
+                                        <div class="word"><h2 class="h2">渝东南旅游</h2><p class="info">桃花源仙女山小南海三日游               桃花源 仙女山 阿依河 小南海</p></div>
+                                        <span class="liBorder" style="display: none;"></span>
+                                        <span class="detail" style="display: none;"> 详情</span>
+                                        <span class="num"></span>
+                                    </a>
+                                </li>
+                                <li class="i4" style="float: left; width: 210px;">
+                                    <a href="/play/travel/4">
+                                        <div class="img"><img src="/img/play/行程4.jpg" alt=""></div>
+                                        <div class="word"><h2 class="h2">桃花源坪坝营恩施大峡谷三日游</h2><p class="info">桃花源景区 伏羲洞 5A  坪坝营   恩施大峡谷  土家女儿城</p></div>
+                                        <span class="liBorder"></span>
+                                        <span class="detail"> 详情</span>
+                                        <span class="num"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="r1-title theme-title">
+                        <h2>主题活动<span>感土家风情、赏木叶号子、品土家美食</span></h2>
+                    </div>
+                    <div class="theme-bg">
+                        <ul>
+                            <% for (let i = 0; i < plays.length; i ++) { %>
+                                <li class="theme-item">
+                                    <div class="theme-item-left">
+                                        <img src="/img/play/<%= plays[i].play_pic %>">
+                                    </div>
+                                    <div  class="theme-item-right">
+                                        <h3><%= plays[i].play_name %></h3>
+                                        <p><%= plays[i].play_detail %></p>
+                                    </div>
+                                </li>
+                             <% } %>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div class="content-right">
+                <h2>特产推荐<a href="/play/product" class="goods-more">更多 ></a></h2>
+                <% for (let i = 0; i < goods.length; i ++) { %>
+                <div class="c-right-box">
+                <a href="/play/product">
+                 <div class="right-box-top"><img src="/img/play/<%=goods[i].goods_pic%>" alt="桃花源森林公园酒店"></div>
+                    <div class="right-box-bottom">
+                        <h4><%=goods[i].goods_name%><span class="goods-pr">￥<%=goods[i].goods_price%>/件</span></h4>
+                        <p class="p1">&nbsp&nbsp&nbsp<%=goods[i].goods_detail%></p>
+                    </div>
+                </a>
+                </div>
+                <% } %>
+            </div>
+        </div>
+    <div>
+</body>
+</html>

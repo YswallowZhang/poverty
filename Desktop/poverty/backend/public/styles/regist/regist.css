@@ -1,0 +1,87 @@
+body {
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+form {
+    margin: 0;
+    padding: 0;
+}
+.regist-wrap {
+    z-index: 2;
+    width: 420px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -137px 0 0 -200px;
+    opacity: 0.88;
+}
+.regist-box {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 420px;
+    padding: 30px 30px 25px 30px;
+    box-sizing: border-box;
+    box-shadow: 0 3px 3px rgba(0,0,0,.4)
+}
+
+.regist-input {
+    border: 1px solid #d8d8d8;
+    width: 260px;
+    height: 28px;
+    border-radius:8px;
+    padding: 6px 0 6px 12px;
+    box-shadow: 0 0 5px #fff;
+    transition: box-shadow .25s linear 0s;
+    outline: 0;
+}
+.regist-input:focus {
+    border:1px solid #51cc31; 
+    box-shadow: 0px 0px 5px #51cc31;
+    outline: 0;
+    transition: box-shadow .25s linear 0s;
+}
+.regist-tip {
+    color: #ff3c00;
+    display: flex;
+    justify-content: flex-end;
+    width: 324px;
+    height: 20px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.regist-btn {
+    width: 360px;
+    height: 42px;
+    line-height: 42px;
+    background-color: #51cc31;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    text-align: center;
+    user-select:none;
+}
+.regist-btn:hover {
+    background-color: #00a263;
+}
+.regist-bg {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    left: 0;
+    background-image: url('/img/regist-bg.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.label {
+    width: 75px;
+    display: inline-block;
+    text-align: right;
+    color:#999;
+    font-size: 14px;
+}

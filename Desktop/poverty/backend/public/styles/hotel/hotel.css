@@ -1,0 +1,410 @@
+
+body {
+    padding: 0;
+    margin: 0;
+    background:#e2e0de url(/img/hotel/背景.jpg) no-repeat center top;
+    position: relative;
+    background-size: 100% 628px
+}
+ul, li, p {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+em {
+    font-style: normal;
+}
+a {
+    text-decoration: none;
+}
+.headMask {
+    height: 200px;
+    width: 100%;
+    min-width: 1200px;
+    position: absolute;
+    top: -100px;
+    left: 0px;
+    z-index: 2;
+    background-color: rgba(255,255,255,0.3);
+    filter: blur(20px);
+    background-attachment: fixed;
+    background:url(/img/hotel/背景.jpg);
+
+}
+header {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+}
+.header-wrap {
+    margin: 0 auto;
+    height: 100px;
+    width: 1000px;
+    overflow: hidden;
+    position: relative;
+}
+.header-nav {
+    font-size: 14px; 
+    display: flex; 
+    color: #333;
+    float: left;
+    overflow: hidden;
+}
+.header-nav a {
+    transition: all 0.1s;
+    font-size: 14px;
+    width: 100px;
+    display: inline-block;
+    height: 100px;
+    line-height: 160px;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    color: #333;
+    padding: 0 16px;
+    position: relative;
+}
+.h1 a {
+    background: url('/img/home/植物icon-一点红.png') no-repeat;
+    background-position: center 0px;
+}
+.h2 a {
+    background: url('/img/home/植物icon-海棠花.png') no-repeat;
+    background-position: center 0px;
+}
+.h3 a {
+    background: url('/img/home/植物icon-铁树.png') no-repeat;
+    background-position: center 0px;
+}
+.h4 a {
+    background: url('/img/home/植物icon-百合.png') no-repeat;
+    background-position: center 0px;
+}
+.h5 a {
+    background: url('/img/home/植物icon-荷花.png') no-repeat;
+    background-position: center 0px;
+}
+.border {
+    width: 100px;
+    height: 8px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.header-nav a:hover {
+    color: #fff !important;
+}
+.header-nav-hover {
+    color: #ff9d00 !important;
+}
+.header-nav-active {
+    color: #ff9d00 !important;
+}
+.header-nav-active div {
+    background: url('/img/home/叶子2.png');
+}
+.header-nav li {
+    display: flex;
+    align-items: center;
+}
+
+.login-out {
+    float: right;
+    line-height: 150px;
+    background: url('/img/home/形状点缀.png') no-repeat;
+    background-position: center 0px;
+}
+.login-out span {
+    color: #333;
+}
+#login {
+    color: #ff9d00;
+}
+#login:hover {
+    text-decoration: underline;
+}
+#regist {
+    color: #ff9d00;
+}
+#regist:hover {
+    text-decoration: underline;
+}
+.useless {
+    height: 311px;
+    width: 1200px;
+    min-width: 1200px;
+}
+.content1 {
+    width: 100%;
+    background: url(/img/news/背景2.png) repeat-x left top;
+    min-width: 1200px;
+    padding-top: 90px;
+    position: relative;
+}
+.content1 .subShadowBox {
+    /* background: url(/img/news/背景1.png); */
+    width: 1216px;
+    height: 876px;
+    position: absolute;
+    left: 50%;
+    margin-left: -608px;
+    top: 82px;
+}
+.content1 .content1-in {
+    clear: both;
+    padding: 25px;
+    width: 1200px;
+    min-height: 606px;
+    box-sizing: border-box;
+    margin: auto;
+    /* background: #e2e0de;
+    border: 1px solid #e2e0de; */
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+}
+
+
+.hotel-box {
+    width: 800px;
+    margin: 0 auto;
+}
+.hotel-wrap {
+}
+.like {
+    position: absolute;
+    right: 0;
+}
+.hotel-word p {
+    width: 680px;
+    margin-bottom: 10px;
+    color:#8B7266;
+}
+.hotel-word p:hover {
+    text-decoration: underline;
+}
+.hotel-item {
+    width: 800px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-bottom: 3px solid #f1f1f1;
+}
+.hotel-item a {
+}
+.hotel-item img {
+    display: inline-block;
+    width: 220px;
+    height: 110px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+.like img {
+    width: 64px;
+    height: 64px;
+    display: inline-block;
+    z-index: 4;
+}
+.hotel-price-wrap {
+    color:#f60;
+    cursor: pointer;
+}
+.hotel-price-wrap:hover {
+    color: #ff9400;
+}
+.hotel-price {
+    font-size: 32px;
+    padding: 0 4px;
+}
+h2 {
+    color: #0066cc;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    overflow: hidden;/*超出部分隐藏*/
+    white-space: nowrap;/*不换行*/
+    text-overflow:ellipsis;/*超出部分文字以...显示*/
+}
+h2:hover {
+    text-decoration: underline;
+}
+.hotel-word {
+    margin-left: 10px;
+    position: relative;
+}
+.hotel-word p {
+    font-size: 14px;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+.hotel-item-right {
+    margin-left: 30px;
+}
+.hotel-btn-detail {
+    width: 110px;
+    height: 36px;
+    line-height: 36px;
+    box-shadow: none;
+    text-shadow: none;
+    border: 0 none;
+    border-radius: 5px;
+    background-color: #ff9a14;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    margin-top: 32px;
+}
+.hotel-btn-detail:hover {
+    background-color:#ff6500;
+}
+
+
+
+.book-box {
+    width: 1000px;
+    height: 500px;
+    position: relative;
+    margin: 30px auto;
+    -webkit-perspective-origin: 50% 60%;
+    perspective-origin: 50% 60%;
+    -webkit-perspective: 1500px;
+    perspective: 1500px;
+    background: url(/img/hotel/bookBg.png) no-repeat 0 0;
+    background-size: 100% 100%;
+}
+.bookPage {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 0;
+    transform-style: preserve-3d;
+    transition: all linear 2s;
+    background: url(/img/hotel/bookLeft.png) no-repeat;
+    background-size: 479.26px 483.33px;
+    background-position: 20.74px 8.3px;
+}
+.bookPage img {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+}
+.bookWord {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    display: inline-block;
+    width: 360px;
+    height: 360px;
+    padding: 20px;
+    font-size: 20px;
+    line-height: 27px;
+    backface-visibility: visible;
+    background-color: #f0f0f0;
+    word-break: break-all;
+}
+.bookWord h3 {
+    text-align: center;
+    color:#8B7266;
+}
+.bookWord p {
+    font-size: 16px;
+    color:rgb(124, 113, 104);
+}
+.food-detail {
+}
+.food-store {
+    position: absolute;
+    bottom: 60px;
+    right: 40px;
+}
+.food-po {
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    
+}
+.frist {
+    left: 0;
+    z-index: 1;
+}
+.bookPage img {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    display: inline-block;
+    width: 400px;
+}
+.pageNumber {
+    position: absolute;
+    bottom: -35px;
+    right: 0;
+    background-color: #f0f0f0;
+    font-size: 16px!important;
+    color:#8B7266;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    display: inline-block;
+}
+
+.runPage, .bookPage:last-child {
+    background: url(/img/hotel/bookRight.png) no-repeat;
+    background-size: 479.26px 483.33px;
+    background-position: 0 8.3px;
+}
+.runPage {
+    right: 0;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+.last {
+    right: 0;
+    z-index: 1;
+}
+.runClass {
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+.lastBtn {
+    position: absolute;
+    top:240px;
+    left:0px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    z-index: 25;
+    background: url(/img/hotel/左箭头.png) no-repeat;
+}
+.nextBtn {
+    position: absolute;
+    top:240px;
+    right:19px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    z-index: 17;
+    background: url(/img/hotel/右箭头.png) no-repeat;
+}
+.login-haved {
+    float: right;
+    line-height: 150px;
+    background: url('/img/home/气球.png') no-repeat;
+    background-position: center 0px
+}
+.login-haved p a {
+    color:#ee357a;
+    width: 100px;
+}

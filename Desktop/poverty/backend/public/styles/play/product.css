@@ -1,0 +1,304 @@
+body {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    background-size: 100% 589px;
+    background-color: #e2e0de
+}
+ul, li, p {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+header {
+    
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    overflow: hidden;
+}
+.header-wrap {
+    margin: 0 auto;
+    height: 100px;
+    width: 1000px;
+    overflow: hidden;
+    position: relative;
+}
+.header-nav {
+    font-size: 14px; 
+    display: flex; 
+    color: #333;
+    float: left;
+    overflow: hidden;
+}
+.header-nav a {
+    transition: all 0.1s;
+    font-size: 14px;
+    width: 100px;
+    display: inline-block;
+    height: 100px;
+    line-height: 160px;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    color: #333;
+    padding: 0 16px;
+    position: relative;
+}
+.h1 a {
+    background: url('/img/home/植物icon-一点红.png') no-repeat;
+    background-position: center 0px;
+}
+.h2 a {
+    background: url('/img/home/植物icon-海棠花.png') no-repeat;
+    background-position: center 0px;
+}
+.h3 a {
+    background: url('/img/home/植物icon-铁树.png') no-repeat;
+    background-position: center 0px;
+}
+.h4 a {
+    background: url('/img/home/植物icon-百合.png') no-repeat;
+    background-position: center 0px;
+}
+.h5 a {
+    background: url('/img/home/植物icon-荷花.png') no-repeat;
+    background-position: center 0px;
+}
+.border {
+    width: 100px;
+    height: 8px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.header-nav a:hover {
+    color: #fff !important;
+}
+.header-nav-hover {
+    color: #ff9d00 !important;
+}
+.header-nav-active {
+    color: #ff9d00 !important;
+}
+.header-nav-active div {
+    background: url('/img/home/叶子2.png');
+}
+.header-nav li {
+    display: flex;
+    align-items: center;
+}
+
+.login-out {
+    float: right;
+    line-height: 150px;
+    background: url('/img/home/形状点缀.png') no-repeat;
+    background-position: center 0px;
+}
+.login-out span {
+    color: #333;
+}
+#login {
+    color: #ff9d00;
+}
+#login:hover {
+    text-decoration: underline;
+}
+#regist {
+    color: #ff9d00;
+}
+#regist:hover {
+    text-decoration: underline;
+}
+.useless {
+    height: 616px;
+    width: 100%;
+    min-width: 1200px;
+    position: relative;
+    overflow: hidden;
+    background-color: #e1e0de;
+}
+.useless img {
+    display: inline-block;
+}
+
+.useless-img1 {
+    width: 546px;
+    height: 500px;
+    position: absolute;
+    right: 0;
+    top: 60px;
+}
+.content1 {
+    width: 100%;
+    /* background: url(/img/news/背景2.png) repeat-x left top; */
+    min-width: 1200px;
+    position: relative;
+}
+.content1 .subShadowBox {
+    /* background: url(/img/news/背景1.png); */
+    width: 1216px;
+    height: 876px;
+    position: absolute;
+    left: 50%;
+    margin-left: -608px;
+    top: 82px;
+}
+.content1 .content1-in {
+    clear: both;
+    padding: 25px;
+    width: 1200px;
+    min-height: 876px;
+    box-sizing: border-box;
+    margin: auto;
+    background: #e2e0de;
+    border: 1px solid #e2e0de;
+    border-radius: 5px;
+    position: relative;
+}
+.login-haved {
+    float: right;
+    line-height: 150px;
+    background: url('/img/home/气球.png') no-repeat;
+    background-position: center 0px
+}
+.login-haved p a {
+    color:#ee357a;
+    width: 100px;
+}
+.content-box h2{
+    height: 80px;
+    line-height: 80px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    background: #e8e7e5 url(/img/play/dirve_bg2.jpg) no-repeat left top;
+    
+}
+.item {
+    display: flex;
+    border-bottom: 3px solid #fff;
+    border-right: 2px solid #fff;
+    overflow: hidden;
+}
+.item-left img {
+    display: inline-block;
+    width: 295px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.item-right {
+    margin-left: 40px;
+    width: 800px;
+    position: relative;
+}
+.item-right-btn-box {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    width: 680px;
+    justify-content: space-between;
+}
+.detail-title {
+    color:#ee357a
+}
+.detail-cont {
+    font-size: 15px;
+}
+.detail-price {
+    color: brown;
+}
+.detail-number {
+    color: #6C6C6C;
+}
+.detail-price em {
+    color: brown;
+    font-size: 26px;
+    font-weight: 700;
+    margin-right: 2px;
+}
+.number-descrease, .number-add {
+    margin-left: 15px;
+    width: 26px;
+    height: 26px;
+    border: 1px solid #ccc;
+    line-height: 26px;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #ededed;
+    user-select: none;
+}
+.number-amount {
+    width: 48px;
+    height: 26px;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: #666;
+    outline: none;
+    border: 0;
+    padding: 0;
+    border-top: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+    background: #FFF;
+}
+.number-add {
+    margin-left: 0px;
+    margin-right: 10px;
+}
+.detail-btn-buy {
+    width: 136px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    border-radius: 2px;
+    color: #E5511D;
+    border: 1px solid #F0CAB6;
+    background: #FFE4D0;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.order-address {
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+.cover-warp {
+    width: 400px;
+    height: 205px;
+    border: 2px solid #fff;
+    border-top: none;
+    text-align: center;
+    position: absolute;
+    right: 50px;
+    background: #e2e0de;
+    transition: all 1s;
+    z-index: -1;
+}
+.order-confirm {
+    width: 200px;
+    height: 30px;
+    background: #b1a87d;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 auto;
+    color:#fff;
+    cursor: pointer;
+}
+.order-item {
+    width: 208px;
+    height: 23px;
+    padding-left: 5px;
+}
+.order-address span {
+    display: inline-block;
+    text-align: right;
+    width: 100px;
+    height: 23px;
+    line-height: 23px;
+}

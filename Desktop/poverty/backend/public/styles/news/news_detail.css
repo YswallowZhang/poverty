@@ -1,0 +1,328 @@
+
+body {
+    margin: 0;
+    background:#e2e0de url(/img/news/背景4.jpg) no-repeat center top;
+    position: relative;
+    background-size: auto 589px;
+    min-width: 1200px;
+}
+a {
+    text-decoration: none;
+}
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+em {
+    font-style: normal;
+}
+.headMask {
+    height: 200px;
+    width: 100%;
+    min-width: 1200px;
+    position: absolute;
+    top: -100px;
+    left: 0px;
+    filter: blur(10px);
+    background: inherit;
+    background-image: inherit;
+    background-position: center 100px;
+    background-size: auto 589px;
+    overflow: hidden;
+    font-size: 60px;
+    color: #000000;
+    overflow: hidden;
+    z-index: 1;
+
+}
+header {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    box-shadow: rgba(0,0,0,0.2) 0px 0px 5px 0px;
+    background: rgba(255,255,255,0.2);
+}
+.header-wrap {
+    margin: 0 auto;
+    height: 100px;
+    width: 1000px;
+    overflow: hidden;
+    position: relative;
+}
+.header-nav {
+    font-size: 14px; 
+    display: flex; 
+    float: left;
+    overflow: hidden;
+}
+.header-nav a {
+    transition: all 0.1s;
+    font-size: 14px;
+    width: 100px;
+    display: inline-block;
+    height: 100px;
+    line-height: 160px;
+    text-align: center;
+    cursor: pointer;
+    color:#000;
+    box-sizing: border-box;
+    padding: 0 16px;
+    position: relative;
+}
+.h1 a {
+    background: url('/img/home/植物icon-一点红.png') no-repeat;
+    background-position: center 0px;
+}
+.h2 a {
+    background: url('/img/home/植物icon-海棠花.png') no-repeat;
+    background-position: center 0px;
+}
+.h3 a {
+    background: url('/img/home/植物icon-铁树.png') no-repeat;
+    background-position: center 0px;
+}
+.h4 a {
+    background: url('/img/home/植物icon-百合.png') no-repeat;
+    background-position: center 0px;
+}
+.h5 a {
+    background: url('/img/home/植物icon-荷花.png') no-repeat;
+    background-position: center 0px;
+}
+.border {
+    width: 100px;
+    height: 8px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.header-nav a:hover {
+    color: #ff9d00 !important;
+}
+
+.header-nav-active {
+    color: #fff !important;
+}
+.header-nav-active div {
+    background: url('/img/home/叶子2.png');
+}
+.header-nav li {
+    display: flex;
+    align-items: center;
+}
+
+.login-out {
+    float: right;
+    line-height: 150px;
+    background: url('/img/home/形状点缀.png') no-repeat;
+    background-position: center 0px;
+}
+.login-out span {
+    color: #333;
+}
+#login {
+    color: #ff9d00;
+}
+#login:hover {
+    text-decoration: underline;
+}
+#regist {
+    color: #ff9d00;
+}
+#regist:hover {
+    text-decoration: underline;
+}
+.useless {
+    height: 311px;
+    width: 1200px;
+    min-width: 1200px;
+}
+.content1 {
+    width: 100%;
+    background: url(/img/news/背景2.png) repeat-x left top;
+    min-width: 1200px;
+    padding-top: 90px;
+    position: relative;
+}
+.content1 .subShadowBox {
+    background: url(/img/news/背景1.png);
+    width: 1216px;
+    height: 876px;
+    position: absolute;
+    left: 50%;
+    margin-left: -608px;
+    top: 82px;
+}
+.content1 .content1-in {
+    clear: both;
+    padding: 25px;
+    width: 1200px;
+    min-height: 876px;
+    box-sizing: border-box;
+    margin: auto;
+    background: #e2e0de;
+    border: 1px solid #e2e0de;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+}
+.content-left {
+    width:820px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+    background: linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* W3C */
+ 
+}
+.foldtl {
+    position: relative;
+  -webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+  -moz-box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+}
+.foldtl:before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 0px;
+    height: 0px;
+    border-bottom: 100px solid #eee;
+    border-left: 100px solid transparent;
+    -webkit-box-shadow: 7px 7px 7px rgba(0,0,0,0.3);
+    box-shadow: 7px 7px 7px rgba(0,0,0,0.3);
+}
+.foldtl:after {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 0px;
+    height: 0px;
+    border-top: 100px solid #e2e0de; 
+    border-right: 100px solid transparent;
+}
+.left-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left-title h3 {
+    margin: 0 20px;
+    color:#804934;
+    width: 400px;
+    text-align: center;
+}
+.title-bg {
+    width: 250px;
+    height: 40px;
+    background: url(/img/news/植物icon-红果.png)
+}
+
+.date {
+    margin-left: 8px;
+}
+.date-box {
+    float: right;
+    margin: 20px;
+}
+.detail-box {
+    display: flex;
+    clear: both;
+    justify-content: space-between;
+}
+.content-left p {
+    width: 560px;
+    line-height: 30px;
+}
+.content-left p img {
+    display: block;
+    width:400px;
+    height: 292px;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+.detail-bg {
+    width: 36px;
+    background: url(/img/news/植物icon-红果.png)
+}
+.content-right {
+    margin-left: 25px;
+    margin-top: 20px;
+}
+.melon-box {
+    width: 300px;
+    padding:2px 20px 20px 20px;
+    background-color: #d9d6d1;
+    box-sizing: border-box;
+    border-bottom-left-radius: 20px 500px;
+    border-bottom-right-radius: 500px 30px;
+    border-top-right-radius: 5px 100px;
+    box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 0 #F6EF97;
+    position: relative;
+    margin-bottom: 25px;
+    background-size: 100% 28px;
+    font-size: 14px;
+}
+.melon-box:after {
+    width: 180px;
+    height: 30px;
+    content: " ";
+    margin-left: -90px;
+    border: 1px solid rgba(200, 200, 200, .8);
+    background: rgba(254, 254, 254, .6);
+    -moz-box-shadow: 0px 0 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0 3px rgba(0, 0, 0, 0.1);
+    -moz-transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+    position: absolute;
+    left: 50%;
+    top: -15px;
+}
+.melon-box h2 {   
+    text-align: center;
+}
+li {
+    list-style: square inside url('/img/news/箭头.png');
+}
+.recommend li {
+    border-bottom: 1px solid #333;
+    margin-top: 10px;
+    line-height: 30px;
+    width: 260px;
+    white-space: nowrap;/*不换行*/
+    text-overflow:ellipsis;/*超出部分文字以...显示*/
+    position: relative;
+}
+.recommend li a {
+    display: inline-block;
+    font-size: 16px;
+    width: 230px;
+    position: absolute;
+    color:#8b7266;
+    top:-3px;
+    overflow: hidden;/*超出部分隐藏*/
+    white-space: nowrap;/*不换行*/
+    text-overflow:ellipsis;/*超出部分文字以...显示*/
+}
+.recommend li a:hover {
+    color:#fe0040
+}
+.login-haved {
+    float: right;
+    line-height: 150px;
+    background: url('/img/home/气球.png') no-repeat;
+    background-position: center 0px
+}
+.login-haved p a {
+    color:#ee357a;
+    width: 100px;
+}

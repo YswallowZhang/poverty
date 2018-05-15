@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>酒店详情</title>
+    <link rel="stylesheet" href="/styles/hotel/hotel_detail.css">
+</head>
+<body>
+    <div class="headMask"></div>
+    <header>
+        <div class="header-wrap">
+            <ul class="header-nav">
+                <li class="h1"><a href="/" class="header-nav-list">首页<div class="border"></div></a></li>
+                <li class="h3"><a href="/news" class="header-nav-list">酉阳资讯<div class="border"></div></a></li>
+                <li class="h2"><a href="/play" class="header-nav-list">玩转酉阳<div class="border"></div></a></li>
+                <li class="h4"><a href="/hotel" class="header-nav-list header-nav-active">酉阳酒店<div class="border"></div></a></li>
+                <% if(userType == 'admin') { %>
+                <li class="h5"><a href="/admin" class="header-nav-list">管理中心<div class="border"></div></a></li>
+                 <% } %>
+            </ul>
+            <% if(!username) { %>
+                <div class="login-out">
+                    <a href="/login" id="login">登录</a>
+                    <span>|</span>
+                    <a href="/regist" id="regist">注册</a>
+                </div>
+            <% } else { %> 
+                <div class="login-haved">
+                    <p><a href="/user/center">用户：<%=username%></a></p>
+                </div>
+            <% } %>
+        </div>
+    </header>
+    <div class="useless"></div>
+    <div class="content1">
+        <div class="subShadowBox"></div>
+        <div class="content1-in">
+    <div class="content">
+        <div class="left">
+            <div class="rabit"></div>
+            <h2><%=hotel.hotel_name %></h2>
+             <p><%=hotel.hotel_position %></p>
+            <div class="left-top">
+                <img src="/img/hotel/<%=hotel.hotel_pic.split(',')[0] %>" alt="" class="deplay-img">
+            </div>
+            <div>
+                <ul class="detail-thumb-nav">
+                <% for (let i = 0; i < hotel.hotel_pic.split(',').length; i ++) { %>
+                    <li class="detail-thumb-nav-item">
+                        <div class="pho_layer"></div>
+                        <img src="/img/hotel/<%=hotel.hotel_pic.split(',')[i] %>" alt="">
+                    </li>
+                <% } %>
+                </ul>
+            </div>
+            <div id="map" style="width:620px; height:340px">
+
+            </div>
+        </div>
+        <div class="right">
+            <div class="right-top">
+                <span>￥<em><%=hotel.hotel_price %></em>每晚</span>
+            </div>
+            <div class="right-middle">
+                <p>入住时间：<input type="date" id="startdate"></p>
+                <p>离开时间：<input type="date" id="enddate"></p>
+                <p>客人姓名：<input type="text" id="onename"></p>
+                <p>联系方式：<input type="text" id="telephone"></p>
+            </div>
+            <div class="right-bottom">
+                立即预定（总计￥<em id="total"></em>）
+            </div>
+            <div class="melon-box">
+                    <h2>简介</h2>
+                    <p><%=hotel.hotel_detail %></p>
+                </div>
+        </div>
+    </div>
+    <footer></footer>
+    <script>
+        var hotel = '<%- JSON.stringify(hotel) %>';
+        var username = '<%=username%>';
+    </script>
+    <script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp&key=25EBZ-HDO34-PN2UE-XCUCK-GSIPF-N4F2J"></script>
+    <script src="/js/hotel/hotel_detail.js"></script>
+</body>
+</html>

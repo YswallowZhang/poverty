@@ -1,0 +1,386 @@
+
+body {
+    padding: 0;
+    margin: 0;
+    background:#e2e0de url(/img/hotel/背景.jpg) no-repeat center top;
+    position: relative;
+    background-size: 100% 628px
+}
+ul, li, p {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+em {
+    font-style: normal;
+}
+a {
+    text-decoration: none;
+}
+.headMask {
+    height: 200px;
+    width: 100%;
+    min-width: 1200px;
+    position: absolute;
+    top: -100px;
+    left: 0px;
+    z-index: 2;
+    background-color: rgba(255,255,255,0.3);
+    filter: blur(20px);
+    background-attachment: fixed;
+    background:url(/img/hotel/背景.jpg);
+
+}
+header {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+}
+.header-wrap {
+    margin: 0 auto;
+    height: 100px;
+    width: 1000px;
+    overflow: hidden;
+    position: relative;
+}
+.header-nav {
+    font-size: 14px; 
+    display: flex; 
+    color: #333;
+    float: left;
+    overflow: hidden;
+}
+.header-nav a {
+    transition: all 0.1s;
+    font-size: 14px;
+    width: 100px;
+    display: inline-block;
+    height: 100px;
+    line-height: 160px;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    color: #333;
+    padding: 0 16px;
+    position: relative;
+}
+.h1 a {
+    background: url('/img/home/植物icon-一点红.png') no-repeat;
+    background-position: center 0px;
+}
+.h2 a {
+    background: url('/img/home/植物icon-海棠花.png') no-repeat;
+    background-position: center 0px;
+}
+.h3 a {
+    background: url('/img/home/植物icon-铁树.png') no-repeat;
+    background-position: center 0px;
+}
+.h4 a {
+    background: url('/img/home/植物icon-百合.png') no-repeat;
+    background-position: center 0px;
+}
+.h5 a {
+    background: url('/img/home/植物icon-荷花.png') no-repeat;
+    background-position: center 0px;
+}
+.border {
+    width: 100px;
+    height: 8px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.header-nav a:hover {
+    color: #fff !important;
+}
+.header-nav-hover {
+    color: #ff9d00 !important;
+}
+.header-nav-active {
+    color: #ff9d00 !important;
+}
+.header-nav-active div {
+    background: url('/img/home/叶子2.png');
+}
+.header-nav li {
+    display: flex;
+    align-items: center;
+}
+
+.login-out {
+    float: right;
+    line-height: 150px;
+    background: url('/img/home/形状点缀.png') no-repeat;
+    background-position: center 0px;
+}
+.login-out span {
+    color: #333;
+}
+#login {
+    color: #ff9d00;
+}
+#login:hover {
+    text-decoration: underline;
+}
+#regist {
+    color: #ff9d00;
+}
+#regist:hover {
+    text-decoration: underline;
+}
+.useless {
+    height: 311px;
+    width: 1200px;
+    min-width: 1200px;
+}
+.content1 {
+    width: 100%;
+    background: url(/img/news/背景2.png) repeat-x left top;
+    min-width: 1200px;
+    padding-top: 90px;
+    position: relative;
+}
+.content1 .subShadowBox {
+    background: url(/img/news/背景1.png) no-repeat;
+    width: 1216px;
+    height: 876px;
+    position: absolute;
+    left: 50%;
+    margin-left: -608px;
+    top: 82px;
+}
+.content1 .content1-in {
+    clear: both;
+    padding: 25px;
+    width: 1200px;
+    min-height: 606px;
+    box-sizing: border-box;
+    margin: auto;
+    /* background: #e2e0de;
+    border: 1px solid #e2e0de; */
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+}
+.login-haved {
+    float: right;
+    line-height: 150px;
+    background: url('/img/home/气球.png') no-repeat;
+    background-position: center 0px
+}
+.login-haved p a {
+    color:#ee357a;
+    width: 100px;
+}
+.model {
+    font-size: 16px;
+    text-align: center;
+    color: rgb(121, 96, 84);
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(126, 97, 83);
+    border-image: initial;
+    border-radius: 10px;
+    line-height: 50px;
+    width: 210px;
+    margin-bottom: 20px;
+}
+.model-active {
+    color:#fff;
+    background: #725a47;
+    border-color: #725a47;
+}
+.model:hover {
+    color:#fff;
+    background: #725a47;
+    border-color: #725a47;
+    text-shadow: 0 0 15px #fff
+}
+.admin-right {
+    width: 800px;
+    margin-left: 120px;
+}
+.admin-add-title,.admin-add-detail,.admin-add-pic,.admin-add-btn {
+    font-size: 18px;
+}
+.admin-add-title,.admin-edit-title {
+}
+.admin-add-detail,.admin-edit-detail {
+    display: flex;
+    margin: 20px 0;
+}
+#u-add-news-title,#u-edit-news-title {
+    margin-left: 53px;
+    width: 650px;
+    height: 30px;
+    font-size: 16px;
+    padding-left: 8px;
+    border:1px solid #c8b3ac;
+}
+#u-add-news-detail,#u-edit-news-detail {
+    width:650px;
+    height: 400px;
+    margin-left: 17px;
+    resize : none;
+    border:1px solid #c8b3ac;
+}
+.admin-add-btn,.admin-edit-btn {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin: 0 auto;
+    background: #725a47;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.admin-add-btn:hover,.admin-edit-btn:hover  {
+    text-shadow: 0 0 5px #fff
+}
+.admin-add-pic,.admin-edit-pic {
+    display: flex;
+}
+
+.u-edit-news-show {
+    margin-left: 22px;
+    margin-right: 22px;
+    width: 214px;
+    height: 185px;
+}
+.u-add-news-show {
+    width: 214px;
+    height: 185px;
+    display: none;
+}
+#cover{ 
+    position:absolute;left:0px;top:0px;
+    background:rgba(0, 0, 0, 0.9);
+    width:100%;  /*宽度设置为100%，这样才能使隐藏背景层覆盖原页面*/
+    height:100%;
+    opacity:0.6;  /*非IE浏览器下设置透明度为60%*/
+    z-Index:999; 
+    display: none; 
+}
+#cover .cover-cont {
+    position: absolute;
+    left:50%;
+    top:50%;
+    width: 200px;
+    height: 80px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 5px;
+}
+#cover .cover-cont p {
+    font-size: 18px;
+    margin-top: 15px;
+}
+.confirm {
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    line-height:40px;
+    background: #725a47;
+    color:#fff;
+    cursor: pointer;
+
+}
+.news-title {
+
+}
+.news-item-cont {
+    width: 600px;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.news-btn-box {
+    display: flex;
+    margin-top:10px;
+    color:#6486fa;
+}
+.admin-btn {
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    background-color: #fff;
+    margin-left: 20px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color:#725a47;
+}
+.admin-btn:hover {
+    background-color: #00d76f;
+    border: 1px solid #00d76f;
+    color:#fff;
+}
+.box {
+    clear: both;
+    border-top: 2px solid #725a47;
+}
+.news-item {
+    border-bottom: 2px solid #725a47;
+    padding: 5px;
+}
+.news-title {
+    color:#caaa62;
+    overflow : hidden;
+    text-overflow: ellipsis;
+}
+.news-add-btn {
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    background-color: #fff;
+    margin-left: 20px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color:#725a47;
+    margin-bottom: 20px;
+}
+.news-btn:hover {
+    background-color: #00d76f;
+    border: 1px solid #00d76f;
+    color:#fff;
+}
+.admin-edit {
+    display: none;
+}
+.admin-add {
+    display: none;
+}
+.news-page-box {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.news-page {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: #fff;
+    margin-left: 20px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color:#725a47;
+    cursor: pointer;
+}
+.news-page:hover {
+    background-color: #00d76f;
+    border: 1px solid #00d76f;
+    color:#fff;
+}

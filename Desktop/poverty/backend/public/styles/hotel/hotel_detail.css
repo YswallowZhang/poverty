@@ -1,0 +1,335 @@
+body {
+    padding: 0;
+    margin: 0;
+    background:#e2e0de url(/img/hotel/背景10.jpg) no-repeat center top;
+    position: relative;
+    background-size: 100% 628px
+}
+ul, li, p {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+em {
+    font-style: normal;
+}
+a {
+    text-decoration: none;
+}
+.headMask {
+    height: 200px;
+    width: 100%;
+    min-width: 1200px;
+    position: absolute;
+    top: -100px;
+    left: 0px;
+    z-index: 2;
+    background-color: rgba(255,255,255,0.3);
+    filter: blur(20px);
+    background-attachment: fixed;
+    background:url(/img/hotel/背景10.jpg);
+
+}
+header {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+}
+.header-wrap {
+    margin: 0 auto;
+    height: 100px;
+    width: 1000px;
+    overflow: hidden;
+    position: relative;
+}
+.header-nav {
+    font-size: 14px; 
+    display: flex; 
+    color: #333;
+    float: left;
+    overflow: hidden;
+}
+.header-nav a {
+    transition: all 0.1s;
+    font-size: 14px;
+    width: 100px;
+    display: inline-block;
+    height: 100px;
+    line-height: 160px;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    color: #fff;
+    padding: 0 16px;
+    position: relative;
+}
+.h1 a {
+    background: url('/img/home/植物icon-一点红.png') no-repeat;
+    background-position: center 0px;
+}
+.h2 a {
+    background: url('/img/home/植物icon-海棠花.png') no-repeat;
+    background-position: center 0px;
+}
+.h3 a {
+    background: url('/img/home/植物icon-铁树.png') no-repeat;
+    background-position: center 0px;
+}
+.h4 a {
+    background: url('/img/home/植物icon-百合.png') no-repeat;
+    background-position: center 0px;
+}
+.h5 a {
+    background: url('/img/home/植物icon-荷花.png') no-repeat;
+    background-position: center 0px;
+}
+.border {
+    width: 100px;
+    height: 8px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.header-nav a:hover {
+    color: #ff9d00 !important;
+}
+.header-nav-hover {
+    color: #ff9d00 !important;
+}
+.header-nav-active {
+    color: #ff9d00 !important;
+}
+.header-nav-active div {
+    background: url('/img/home/叶子2.png');
+}
+.header-nav li {
+    display: flex;
+    align-items: center;
+}
+
+.login-out {
+    float: right;
+    line-height: 150px;
+    background: url('/img/home/形状点缀.png') no-repeat;
+    background-position: center 0px;
+}
+.login-out span {
+    color: #333;
+}
+#login {
+    color: #ff9d00;
+}
+#login:hover {
+    text-decoration: underline;
+}
+#regist {
+    color: #ff9d00;
+}
+#regist:hover {
+    text-decoration: underline;
+}
+.useless {
+    height: 250px;
+    width: 1200px;
+    min-width: 1200px;
+}
+.content1 {
+    width: 100%;
+    background: url(/img/news/背景2.png) repeat-x left top;
+    min-width: 1200px;
+    padding-top: 90px;
+    position: relative;
+}
+.content1 .subShadowBox {
+    background: url(/img/news/背景1.png);
+    width: 1216px;
+    height: 876px;
+    position: absolute;
+    left: 50%;
+    margin-left: -608px;
+    top: 82px;
+}
+.content1 .content1-in {
+    clear: both;
+    padding: 25px;
+    width: 1200px;
+    min-height: 606px;
+    box-sizing: border-box;
+    margin: auto;
+    background: #e2e0de;
+    border: 1px solid #e2e0de; 
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+}
+
+header p {
+    color:#959ea7;
+    padding-left: 15px;
+}
+.content {
+    display: flex;
+    justify-content: center;  
+    width: 100%;  
+}
+.left {
+    width: 630px;
+    margin-right: 30px;
+}
+.rabit {
+    width: 650px;
+    height: 32px;
+    background: url(/img/hotel/植物icon-向日葵.png)
+}
+.right {
+    width: 380px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 60px;
+}
+.right-top {
+    color:#f05b72;
+    text-align: center;
+}
+.right-top em {
+    font-size: 28px;
+    margin-right: 8px;
+}
+.right-bottom {
+    width: 280px;
+    height: 44px;
+    background-color: #f05b72;
+    text-align: center;
+    line-height: 44px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+.left-top {
+    margin-top: 20px;
+    width: 620px;
+    height: 413px;
+    margin-bottom: 10px;
+}
+.left-top img{
+    width: 620px;
+    height: 413px;
+}
+.detail-thumb-nav {
+    height: 87px;
+}
+.detail-thumb-nav li {
+    position: relative;
+    float: left;
+    width: 118px;
+    height: 87px;
+    margin-bottom: 2px;
+    cursor: pointer;
+    overflow: hidden;
+    text-align: center;
+    margin-right: 6px;
+}
+.pho_layer {
+    background: #000;
+    filter: Alpha(opacity=30);
+    opacity: 0.3;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 118px;
+    height: 87px;
+}
+.pho_cur {
+    border: 3px solid #3ac6aa;
+    width: 112px;
+    height: 81px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.detail-thumb-nav li img {
+    display: inline-block;
+    width: 131px;
+    height: 87px;
+}
+#map {
+    margin-top: 20px;
+}
+footer {
+    margin-top: 30px;
+    height: 140px;
+    background-color: #fff;
+}
+.right-middle {
+
+}
+.right-middle p {
+    height: 40px;
+    font-size: 18px;
+    text-align: center;
+}
+#startdate {
+    font-size: 14px;
+}
+#enddate {
+    font-size: 14px;
+}
+.melon-box {
+    width: 380px;
+    padding:2px 20px 20px 20px;
+    background-color: #d9d6d1;
+    box-sizing: border-box;
+    border-bottom-left-radius: 20px 500px;
+    border-bottom-right-radius: 500px 30px;
+    border-top-right-radius: 5px 100px;
+    box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 0 #F6EF97;
+    position: relative;
+    margin-top: 35px;
+    background-size: 100% 28px;
+    font-size: 16px;
+    line-height: 30px;
+}
+.melon-box:after {
+    width: 180px;
+    height: 30px;
+    content: " ";
+    margin-left: -90px;
+    border: 1px solid rgba(200, 200, 200, .8);
+    background: rgba(254, 254, 254, .6);
+    -moz-box-shadow: 0px 0 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0 3px rgba(0, 0, 0, 0.1);
+    -moz-transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+    position: absolute;
+    left: 50%;
+    top: -15px;
+}
+.melon-box h2 {   
+    text-align: center;
+}
+#onename {
+    width: 150px;
+    font-size: 18px;
+}
+#telephone {
+    width: 150px;
+    font-size: 18px;
+}
+.login-haved {
+    float: right;
+    line-height: 150px;
+    background: url('/img/home/气球.png') no-repeat;
+    background-position: center 0px
+}
+.login-haved p a {
+    color:#ee357a;
+    width: 100px;
+}
